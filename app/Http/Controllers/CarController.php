@@ -49,7 +49,8 @@ class CarController extends Controller
       $errors = $car->getErrors();
       return redirect()
         ->route('cars.create')
-        ->with('errors', $errors);
+        ->with('errors', $errors)
+        ->withInput();
     }
 
     // success!
